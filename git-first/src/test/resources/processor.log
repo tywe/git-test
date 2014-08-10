@@ -1,0 +1,8 @@
+2014-08-10 20:41:38.734 - [ ERROR ]  app start
+2014-08-10 20:41:38.781 - [ INFO ]  app start
+2014-08-10 20:42:26.812 - [ ERROR ]  app start
+2014-08-10 20:42:26.812 - [ INFO ]  app start
+2014-08-10 20:45:07.484 - [ INFO ]  app start
+2014-08-10 20:45:07.484 - [ ERROR ]  app start
+java.lang.Exception: app exception
+	at org.teng.java.file.study.FileHelper.main(FileHelper.java:9)
