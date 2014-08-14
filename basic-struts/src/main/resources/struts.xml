@@ -9,21 +9,19 @@
 
 	<package name="basicstruts2" extends="struts-default">
 
-        <!-- If no class attribute is specified the framework will assume success and 
-        render the result index.jsp -->
-        <!-- If no name value for the result node is specified the success value is the default -->
+		<!-- If no class attribute is specified the framework will assume success 
+			and render the result index.jsp -->
+		<!-- If no name value for the result node is specified the success value 
+			is the default -->
 		<action name="index">
 			<result>/index.jsp</result>
 		</action>
 
-	    <action name="edit" class="org.apache.struts.edit.action.EditAction" method="input">
-	    	<result name="input">/edit.jsp</result>
-	    </action>
-	    
-	    <action name="save" class="org.apache.struts.edit.action.EditAction" method="execute">
-	        <result name="input">/edit.jsp</result>
-	    	<result name="success">/thankyou.jsp</result>
-	    </action>
+
+		<action name="hello"
+			class="org.teng.struts.basic.action.HelloWorldAction" method="execute">
+			<result name="success">/pages/HelloWorld.jsp</result>
+		</action>
 
 	</package>
 
