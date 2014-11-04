@@ -113,7 +113,11 @@ public class MenuTree {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		string = "...........）；";
-		System.out.println(string);
+		String htmlString = "<<<aaa<<<bb>>bb>>";
+		System.out.println(htmlString);
+		String ltString = htmlString.replaceAll("<", "&lt").replace(">", "&gt");
+		System.out.println(ltString);
+		String gtString = ltString.replace(">", "&gt");
+		System.out.println(gtString);
 	}
 }

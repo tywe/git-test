@@ -1,0 +1,35 @@
+2014-10-11 15:45:32 - Serialization             :: com.teng.java.serialize.Serialization@294f62
+2014-10-11 15:47:08 - Serialization             :: 10
+2014-10-11 17:18:06 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:18:06 - ByteStringConvert         :: line 0 : 你好，世界
+2014-10-11 17:18:06 - ByteStringConvert         :: line 0 : I am 滕义伟
+2014-10-11 17:18:47 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:18:47 - ByteStringConvert         :: line 0 : 你好，世界
+2014-10-11 17:18:47 - ByteStringConvert         :: line 0 : I am 滕义伟
+2014-10-11 17:19:18 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:19:18 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:19:18 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:22:44 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:22:54 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:22:58 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:23:54 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:23:54 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:23:54 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:25:19 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:25:19 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:25:19 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:26:47 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:26:47 - ByteStringConvert         :: line 1 : ä½ å¥½ï¼ä¸ç
+2014-10-11 17:26:47 - ByteStringConvert         :: line 2 : I am æ»ä¹ä¼
+2014-10-11 17:27:18 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:27:18 - ByteStringConvert         :: line 1 : ä½ å¥½ï¼ä¸ç
+2014-10-11 17:27:18 - ByteStringConvert         :: line 2 : I am æ»ä¹ä¼
+2014-10-11 17:28:04 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:28:04 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:28:04 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:28:41 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:28:41 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:28:41 - ByteStringConvert         :: line 2 : I am 滕义伟
+2014-10-11 17:29:43 - ByteStringConvert         :: line 0 : hello world
+2014-10-11 17:29:43 - ByteStringConvert         :: line 1 : 你好，世界
+2014-10-11 17:29:43 - ByteStringConvert         :: line 2 : I am 滕义伟
