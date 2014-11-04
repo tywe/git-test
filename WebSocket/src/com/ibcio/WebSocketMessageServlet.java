@@ -14,7 +14,9 @@ public class WebSocketMessageServlet extends org.apache.catalina.websocket.WebSo
 	public static int ONLINE_USER_COUNT	= 1;
 	
 	public String getUser(HttpServletRequest request){
-		return (String) request.getSession().getAttribute("user");
+		String user = (String) request.getSession().getAttribute("user");
+		System.out.println("user" + user);
+		return user;
 	}
 
 	//跟平常Servlet不同的是，需要实现createWebSocketInbound，在这里初始化自定义的WebSocket连接对象

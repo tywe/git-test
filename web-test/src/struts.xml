@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- 该属性指定需要Struts2处理的请求后缀，该属性的默认值是action，即所有匹配*.action的请求都由Struts2处理。
+        如果用户需要指定多个请求后缀，则多个后缀之间以英文逗号（,）隔开。 -->
+    <constant name="struts.action.extension" value="do" />
+    <!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 默认的视图主题 -->
+    <constant name="struts.ui.theme" value="simple" />
+    <!--<constant name="struts.objectFactory" value="spring" />-->
+    <!--解决乱码    -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->
+    <constant name="struts.multipart.maxSize" value="10701096"/>
+    <!-- 设置上传文件的临时文件夹,默认使用javax.servlet.context.tempdir -->
+    <constant name="struts.multipart.saveDir " value="d:/tmp" />
+    
+         
+    <package name="upload2" namespace="/upload" extends="struts-default">
+        <action name="*_upload2" class="org.teng.file.upload.UploadAction2" method="{1}">
+            <result name="success">/WEB-INF/page/message.jsp</result>
+        </action>
+    </package>
+    
+    <package name="upload3" extends="struts-default">
+        <action name="upload3" class="org.teng.file.upload.UploadAction3" method="execute">
+            <!-- 动态设置savePath的属性值 -->
+            <param name="savePath">/images</param>
+            <result name="success">/page/message.jsp</result>
+            <result name="input">/upload/upload.jsp</result>
+            <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>
+                <!-- 文件大小, 以字节为单位 -->
+                <param name="maximumSize">1025956</param>
+            </interceptor-ref>
+            <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+            <interceptor-ref name="defaultStack" />
+        </action>
+    </package>
+</struts>
+
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.custom.i18n.resources" value="message" /> 
+    
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    
+    上传过程中临时文件存放目录
+    <constant name="struts.multipart.saveDir" value="c:\"></constant>
+    
+    <package name="struts2" extends="struts-default">
+    
+        <action name="upload"
+            class="org.teng.file.upload.UploadAction">
+            <result name="success">/uploadResult.jsp</result>
+            <result name="input">/index.jsp</result>
+            定义文件上传拦截器
+            <interceptor-ref name="fileUpload">
+                设置文件上传大小
+                <param name="maximumSize">409600</param>
+                设置文件上传类型 
+                <param name="allowedTypes">
+                    application/vnd.ms-powerpoint
+                </param>
+               
+            </interceptor-ref>
+            自定义了拦截器后必手动定义默认的拦截器，否则默认的拦截器不会被执行
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+    </package>
+
+</struts>
+ -->

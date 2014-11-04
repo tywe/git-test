@@ -3,11 +3,16 @@ package com.ibcio;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 import net.sf.json.JSONObject;
 
 import org.apache.catalina.websocket.MessageInbound;
 import org.apache.catalina.websocket.WsOutbound;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class WebSocketMessageInbound extends MessageInbound {
 
@@ -62,5 +67,23 @@ public class WebSocketMessageInbound extends MessageInbound {
 	protected void onTextMessage(CharBuffer message) throws IOException {
 		//向所有在线用户发送消息
 		WebSocketMessageInboundPool.sendMessage(message.toString());
+	}
+	
+	
+	public static void main(String[] args){
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		Gson gson = new Gson();
+		String listJsonString = gson.toJson(list);
+		 System.out.println("list:" + listJsonString);
+		
+		List<Integer> parserList = gson.fromJson(listJsonString, new TypeToken<ArrayList<Integer>>(){}.getType());
+		
+		for(int element : parserList){
+			System.out.println("element:" + element);
+		}
 	}
 }
